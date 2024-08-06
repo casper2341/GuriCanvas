@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.guri.guricanvas.shapes.Circle
 import com.guri.guricanvas.shapes.Rectangle
+import com.guri.guricanvas.shapes.Triangle
 
 @Composable
 fun ShapeScreen(itemShape: String) {
@@ -37,19 +38,9 @@ fun ShapeScreen(itemShape: String) {
             "Rectangle" -> {
                 Rectangle()
             }
+            "Triangle" -> {
+                Triangle()
+            }
         }
-
-        Text(
-            text = itemShape,
-            textAlign = TextAlign.Center,
-            style = TextStyle(
-                color = Color.Red,
-                fontWeight = FontWeight.Medium,
-                fontSize = 24.sp
-            ),
-            modifier = Modifier
-                .padding(16.dp)
-                .clickable { /* Handle click */ }
-        )
     }
 }
